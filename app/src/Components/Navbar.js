@@ -23,6 +23,7 @@ function Navbar() {
                             <TextField
                                 className="mb-2"
                                 label="Search Countries"
+                                sx={{ input: { color: 'white' } }}
                                 InputProps={{
                                     endAdornment: (
                                         <InputAdornment>

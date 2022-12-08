@@ -1,0 +1,11 @@
+.row.title {
+    border-bottom: 1px solid #e2dcdc;
+    margin-top: 15px;
+}
+.row.detail {
+    align-items: center;
+    border-bottom: 1px solid #e2dcdc;
+}
+.flag.col-md-2.text-center {
+    font-size: 80px;
+}

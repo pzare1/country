@@ -1,12 +1,12 @@
 import React from 'react'
 import Navbar from '../Components/Navbar'
-
-function Home() {
+import ListCountry from '../Components/ListCountry'
+function Home({alldata}) {
     return (
         <>
-            <Navbar/>  
+            <Navbar/>
+            <ListCountry alldata={alldata} />
         </>
     )
 }
-
 export default Home

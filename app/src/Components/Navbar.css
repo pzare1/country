@@ -1,3 +1,18 @@
 .nav-container.w-100.d-flex.justify-content-between {
     align-items: center;
 }
+.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-formControl.MuiInput-formControl.MuiInputBase-adornedEnd {
+    border: 1px solid white;
+    border-radius: 4px;
+}
+input.MuiInputBase-input.MuiInput-input.MuiInputBase-inputAdornedEnd {
+    color: white;
+    padding: 7px;
+}
+span.MuiIconButton-label {
+    color: white;
+}
+label.MuiFormLabel-root.MuiInputLabel-root.MuiInputLabel-formControl.MuiInputLabel-animated {
+    color: white;
+    margin-left: 10px;
+}
