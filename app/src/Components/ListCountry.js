@@ -1,11 +1,11 @@
 import React from 'react'
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import '../Components/ListCountry.css'
-function ListCountry({alldata}) {
-    
+function ListCountry({ alldata }) {
+
     return (
         <>
-          <div className="container-fluid">
+            <div className="container-fluid">
                 <div className="row title">
                     <div className="col-md-2 text-center text-secondary">
                         <p>Flag</p>
@@ -26,7 +26,7 @@ function ListCountry({alldata}) {
                         <p>Link</p>
                     </div>
                 </div>
-                {alldata.map((country) =>(
+                {alldata.map((country) => (
                     <div className="row detail">
                         <div className="flag col-md-2 text-center">
                             {country.flag}
@@ -40,16 +40,16 @@ function ListCountry({alldata}) {
                         <div className="population col-md-2 text-center">
                             {country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         </div>
-                        {/* <div className="languages col-md-2 text-center">
+                        {/* <div className="language col-md-2 text-center">
                      
                         </div> */}
                         <div className="arrowkey col-md-2 text-center">
-                           <KeyboardArrowRightIcon></KeyboardArrowRightIcon>
+                            <KeyboardArrowRightIcon></KeyboardArrowRightIcon>
                         </div>
-                       
+
                     </div>
                 ))}
-          </div>  
+            </div>
         </>
     )
 }
