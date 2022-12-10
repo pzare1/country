@@ -8,6 +8,7 @@ function Pagination({totalPosts,postNumber,setPage,page}) {
     }
     const handleChange = (e,p) => {
         setPage(p)
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     return (
         <> 

@@ -42,13 +42,21 @@ function ListCountry({ alldata }) {
                         <div className="population col-md-2 text-center">
                             {country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
                         </div>
-                        {/* <div className="language col-md-2 text-center">
-                     
-                        </div> */}
-                        <div className="arrowkey col-md-2 text-center">
-                            <Link to={"/"+country.name.common}><KeyboardArrowRightIcon></KeyboardArrowRightIcon></Link>
+                        <div className="population col-md-2 text-center">
+                            {
+                                alldata.map((item) => (
+                                    item.languages && Object.keys(item.languages).map((key, index) => (
+                                        <ul key={index}>
+                                            <li className="language-list">
+                                                {item.languages[key]}
+                                            </li>
+                                        </ul>
+                                    ))))
+                            }
                         </div>
-
+                        <div className="arrowkey col-md-2 text-center">
+                            <Link to={"/" + country.name.common}><KeyboardArrowRightIcon></KeyboardArrowRightIcon></Link>
+                        </div>
                     </div>
                 ))}
             </div>

@@ -35,7 +35,7 @@ function CountryInside() {
                         </div>
                     </div>
                     <div className="col-md-6 description-in">
-                        <MoreVertIcon />
+                        <MoreVertIcon className="d-none d-sm-block"/>
                     </div>
                 </div>
                 <div className="row sign">
@@ -47,14 +47,14 @@ function CountryInside() {
                     <div className="col-md-6 m-auto">
                         <p className="text-justify text-des mt-2 mb-2">
                             The country belongs to <span class="text-mark mt-2 mb-2">{countryDetail[0]?.region}</span> region and <span class="text-mark mt-2 mb-2">{countryDetail[0]?.subregion}</span> sub-region.
-                            Located at the  °N and  °W, this country has population of <span class="text-mark mt-2 mb-2">{countryDetail[0]?.population}</span>
+                            Located at the {countryDetail[0]?.capitalInfo?.latlng[0]} °N and {countryDetail[0]?.capitalInfo?.latlng[1]} °W, this country has population of <span class="text-mark mt-2 mb-2">{countryDetail[0]?.population}</span>
                             and it has gained the independent,according to the CIA World Factbook.
                         </p>
                     </div>
                 </div>
                 <div className="row location-back">
                     <div className="col-md-6 m-auto">
-                        <Link to={"/"}><ChevronLeftIcon color="primary" /></Link>
+                        <Link className="m-2" to={"/"}><ChevronLeftIcon color="primary" /></Link>
                         <a href={countryDetail[0]?.maps?.googleMaps}><LocationOnIcon color="primary" /></a>
                     </div>
                 </div>

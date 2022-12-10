@@ -9,3 +9,11 @@
 .flag.col-md-2.text-center {
     font-size: 80px;
 }
+.language-list{
+    width: 50%;
+    margin: 0 auto;
+    color: #212529;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    padding: 10px;
+}

@@ -5,7 +5,7 @@ import Pagination from '../Components/Pagination'
 function Home({alldata,totalPosts, postPerPage,setcurrentPage,currentPage}) {
     return (
         <>
-            <Navbar/>
+            <Navbar alldata={alldata}/>
             <ListCountry alldata={alldata} />
             <Pagination  totalPosts={totalPosts} postNumber={postPerPage} setPage={setcurrentPage} page={currentPage}/>
         </>

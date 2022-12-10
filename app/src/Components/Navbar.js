@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,7 +10,8 @@ import SearchIcon from "@material-ui/icons/Search";
 
 import './Navbar.css';
 
-function Navbar() {
+function Navbar({alldata}) {
+    const [query, setquery] = useState("")
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
@@ -23,6 +24,7 @@ function Navbar() {
                             <TextField
                                 className="mb-2"
                                 label="Search Countries"
+                                onChange={e => setquery(e.target.value)}
                                 sx={{ input: { color: 'white' } }}
                                 InputProps={{
                                     endAdornment: (

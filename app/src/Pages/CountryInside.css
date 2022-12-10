@@ -4,7 +4,6 @@
 .MuiSvgIcon-colorPrimary {
     color: #3f51b5;
     font-size: 1rem;
-
 }
 .flagsign {
     border-radius: 50%;
@@ -25,4 +24,12 @@
 .text-mark{
     color: #3f51b5;
     font-weight: bold;
+}
+.row.location-back {
+    display: flex;
+    justify-content: center;
+}
+.col-md-6.description-in {
+    display: flex;
+    justify-content: center;
 }
