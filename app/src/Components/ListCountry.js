@@ -1,6 +1,8 @@
 import React from 'react'
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
-import '../Components/ListCountry.css'
+import '../Components/ListCountry.css';
+import { Link } from 'react-router-dom';
+
 function ListCountry({ alldata }) {
 
     return (
@@ -44,7 +46,7 @@ function ListCountry({ alldata }) {
                      
                         </div> */}
                         <div className="arrowkey col-md-2 text-center">
-                            <KeyboardArrowRightIcon></KeyboardArrowRightIcon>
+                            <Link to={"/"+country.name.common}><KeyboardArrowRightIcon></KeyboardArrowRightIcon></Link>
                         </div>
 
                     </div>

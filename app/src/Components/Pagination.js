@@ -1,19 +1,23 @@
 import React from 'react'
-
-function Pagination({totalPosts,postNumber,setPage}) {
+import MaterialPagination from '@mui/material/Pagination';
+import './Pagination.css'
+function Pagination({totalPosts,postNumber,setPage,page}) {
     let pages = [];
-    const mathi = totalPosts/postNumber;
     for (var i = 1; i<= Math.ceil(totalPosts/postNumber); i++){
         pages.push(i);
     }
-    console.log(mathi);
+    const handleChange = (e,p) => {
+        setPage(p)
+    }
     return (
-        <>
-            {pages.map((page,index) => {
-                return <button className="btn btn-primary m-2" onClick={() =>setPage(page)} key={index}>{page}</button>  
-            })}     
+        <> 
+             <MaterialPagination color="primary" count={pages.length} onChange={handleChange}/>   
         </>
     )
 }
 
 export default Pagination
+
+
+
+
