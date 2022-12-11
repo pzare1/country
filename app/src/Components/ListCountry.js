@@ -3,7 +3,8 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import '../Components/ListCountry.css';
 import { Link } from 'react-router-dom';
 
-function ListCountry({ alldata }) {
+function ListCountry({ alldata, totaldata}) {
+    console.log(totaldata)
 
     return (
         <>

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Home from './Pages/Home';
 import CountryInside from './Pages/CountryInside'
-
+import SearchResult from './Components/SearchResult/SearchResult';
 import axios from 'axios';
 import {
   BrowserRouter,
@@ -10,6 +10,7 @@ import {
   Route,
   Router,
 } from "react-router-dom";
+
 
 
 function App() {
@@ -29,12 +30,15 @@ function App() {
   const lastPostIndex = currentPage * postPerPage;
   const firstPostIndex = lastPostIndex - postPerPage;
   const currentPosts = alldata.slice(firstPostIndex, lastPostIndex);
+
   return (
     <>
+
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home alldata={currentPosts} totalPosts={alldata.length} postPerPage={postPerPage} setcurrentPage={setcurrentPage} currentPage={currentPage}/>}></Route>
+          <Route path="/" element={<Home alldata={currentPosts} totaldata={alldata} totalPosts={alldata.length} postPerPage={postPerPage} setcurrentPage={setcurrentPage} currentPage={currentPage}/>}></Route>
           <Route path="/:country" element={<CountryInside />}></Route>
+          <Route path="/search/:name" element={<SearchResult />}></Route>
         </Routes>
       </BrowserRouter>
     </>
