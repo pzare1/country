@@ -7,6 +7,7 @@ import './CountryInside.css';
 import axios from 'axios';
 
 function CountryInside() {
+    //using params in order to get data from api
     const [countryDetail, setcountryDetail] = useState([])
     let params = useParams();
     function getCountry() {
@@ -20,7 +21,6 @@ function CountryInside() {
         getCountry();
         setcountryDetail(params.country)
     }, [])
-    console.log(countryDetail);
     return (
         <>
             <div className="container">

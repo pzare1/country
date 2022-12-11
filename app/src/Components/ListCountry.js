@@ -3,9 +3,8 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import '../Components/ListCountry.css';
 import { Link } from 'react-router-dom';
 
-function ListCountry({ alldata, totaldata}) {
-    console.log(totaldata)
-
+function ListCountry({ allData }) {
+    //list of the countries with map method
     return (
         <>
             <div className="container-fluid">
@@ -29,8 +28,8 @@ function ListCountry({ alldata, totaldata}) {
                         <p>Link</p>
                     </div>
                 </div>
-                {alldata.map((country) => (
-                    <div className="row detail">
+                {allData.map((country,index) => (
+                    <div key={index} className="row detail">
                         <div className="flag col-md-2 text-center">
                             {country.flag}
                         </div>
@@ -45,7 +44,7 @@ function ListCountry({ alldata, totaldata}) {
                         </div>
                         <div className="population col-md-2 text-center">
                             {
-                                alldata.map((item) => (
+                                allData.map((item) => (
                                     item.languages && Object.keys(item.languages).map((key, index) => (
                                         <ul key={index}>
                                             <li className="language-list">
